@@ -1544,11 +1544,11 @@ class Player extends Human implements CommandSender, InventoryHolder, IPlayer{
 				}
 
 				if(!$this->server->isWhitelisted(\strtolower($this->getName()))){
-					$this->close(TextFormat::YELLOW . $this->username . " has left the game", "Server is private.");
+					$this->close(TextFormat::YELLOW . $this->username . " has left the game", "§9§lServer Whitelisted! DarkRealms.cf");
 
 					return;
 				}elseif($this->server->getNameBans()->isBanned(\strtolower($this->getName())) or $this->server->getIPBans()->isBanned($this->getAddress())){
-					$this->close(TextFormat::YELLOW . $this->username . " has left the game", "You have been banned.");
+					$this->close(TextFormat::YELLOW . $this->username . " has left the game", "§4§lAPPEAL BAN AT DarkRealms.cf");
 
 					return;
 				}
